@@ -13,5 +13,3 @@ services:
     ports:
       - 65520:65520
     network_mode: bridge
-volumes:
-  mysql-data:
