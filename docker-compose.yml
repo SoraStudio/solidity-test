@@ -1,0 +1,17 @@
+version: '3'
+services:
+  remix-ide:
+    image: remixproject/remix-ide:latest
+    container_name: remix-ide
+    ports:
+      - 8080:80
+    network_mode: bridge
+  remixd:
+    image: hoshinotouko/remixd:latest
+    volumes:
+      - ./src:/app
+    ports:
+      - 65520:65520
+    network_mode: bridge
+volumes:
+  mysql-data:
